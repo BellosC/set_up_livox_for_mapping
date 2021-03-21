@@ -85,18 +85,22 @@ You can get the instructions from here: https://github.com/Livox-SDK/Livox-SDK
 Installation complete.
 
 If you want to capture and save a file in .lvx format type:
-      1) cd build
-      2) cd Livox-SDK
-      3) cd build
-      4) cd sample
-      5) cd lidar_lvx_file
-      6) ./lidar_lvx_sample -l -t 10 (read the Program Options for more info)
+1) cd build
+2) cd Livox-SDK
+3) cd build
+4) cd sample
+5) cd lidar_lvx_file
+6) ./lidar_lvx_sample -l -t 10 (read the Program Options for more info)
 
 Program Options:
-      [-t] Time to save point cloud to the lvx file.(unit: s)
-      [-p] Get the extrinsic parameter from standard extrinsic.xml file(The same as viewer) in the executable file's directory.
-      Here is the example:
-      ./lidar_lvx_sample -c "00000000000002&00000000000003&00000000000004" -l -t 10 -p
+
+[-t] Time to save point cloud to the lvx file.(unit: s)
+
+[-p] Get the extrinsic parameter from standard extrinsic.xml file(The same as viewer) in the executable file's directory.
+
+Here is the example:
+
+./lidar_lvx_sample -c "00000000000002&00000000000003&00000000000004" -l -t 10 -p
 
 Note: .lvx files can be opened through livox_viewer, you can play them like a video, and if you want you can export **just a frame** in .las or in .csv format.
 
@@ -115,10 +119,14 @@ You can get the instruction from here: https://github.com/Livox-SDK/livox_ros_dr
 4) ***source ./devel/setup.sh***
 
 You are ready. 
+
 If you want you can run it, for example with the command: ***roslaunch livox_ros_driver livox_lidar_rviz.launch***
+
 It is important to read the instructions and the info of the livox_ros_driver command options from here: https://github.com/Livox-SDK/livox_ros_driver
 
+
 Also, extremelly important is the **json** file from where you can pre-set some important parameters.
+
 The json configuration file is in the ***ws_livox/src/livox_ros_driver/config*** directory.
 
 ## 5) Install the livox_mapping package
@@ -148,15 +156,24 @@ You can follow the instructions from here: https://github.com/Livox-SDK/livox_ma
 10) ***source ~/catkin_ws/devel/setup.bash***
 
 Installation complete.
+
+
 For Livox Horizon, run the next two commands in **defferent terminals**:
 
 terminal_1) ***roslaunch livox_mapping mapping_horizon.launch***
+
 terminal_2) ***roslaunch livox_ros_driver livox_lidar_msg.launch***
+
 
 If you want to **save the pcd** file please add map_file_path in launch file of the *mapping_horizon.launch*
 
 When you stop those 2 commands, you will find a .pcd file in the path that you hwve typed in the *map_file_path*.
+
 You can open this .pcd file in **Cloud Compare** or any other similar point-cloud software that supports .pcd file format.
 
-I will try to impove this guide in the near future.
+
+
+
+I will try to impove more this guide in the near future.
+
 Keep walking fellows.
