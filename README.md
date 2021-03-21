@@ -1,7 +1,7 @@
 # set_up_livox_for_mapping
 
 ### This is a guide to help you set up a *computer* or a *raspberry pi 4 model B* from zero, in order to be able to achieve mapping with livox horizon lidar.
-## 1) Download and install **ubuntu 18.04 LTS** operating system. You can get it from here: https://ubuntu.com
+## 1) Download and install **Ubuntu 18.04 LTS** operating system. You can get it from here: https://ubuntu.com
 Be carefull if you are using a computer (x86 version) or a raspberry pi (arm64).
 
 ## 2) Install **ROS Melodic** (Robot Operating System)
