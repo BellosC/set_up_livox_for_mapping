@@ -155,3 +155,8 @@ terminal_2) ***roslaunch livox_ros_driver livox_lidar_msg.launch***
 
 If you want to **save the pcd** file please add map_file_path in launch file of the *mapping_horizon.launch*
 
+When you stop those 2 commands, you will find a .pcd file in the path that you hwve typed in the *map_file_path*.
+You can open this .pcd file in **Cloud Compare** or any other similar point-cloud software that supports .pcd file format.
+
+I will try to impove this guide in the near future.
+Keep walking fellows.
