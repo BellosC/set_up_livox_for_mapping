@@ -68,3 +68,90 @@ Now, in order to make sure that *~/catkin_ws/devel* is the default workspace, yo
 16) ***ros cd***
 
 **Congratulations, now you have ROS melodic in your computer.**
+
+## 3) Install Livox-SDK
+You can get the instructions from here: https://github.com/Livox-SDK/Livox-SDK
+
+**Or you can copy from here and paste to your terminal:**
+
+1) ***sudo apt install cmake***
+
+2) ***git clone https://github.com/Livox-SDK/Livox-SDK.git***
+   ***cd Livox-SDK***
+   ***cd build && cmake ..***
+   ***make***
+   ***sudo make install***
+
+Installation complete.
+
+If you want to capture and save a file in .lvx format type:
+      1) cd build
+      2) cd Livox-SDK
+      3) cd build
+      4) cd sample
+      5) cd lidar_lvx_file
+      6) ./lidar_lvx_sample -l -t 10 (read the Program Options for more info)
+
+Program Options:
+      [-t] Time to save point cloud to the lvx file.(unit: s)
+      [-p] Get the extrinsic parameter from standard extrinsic.xml file(The same as viewer) in the executable file's directory.
+      Here is the example:
+      ./lidar_lvx_sample -c "00000000000002&00000000000003&00000000000004" -l -t 10 -p
+
+Note: .lvx files can be opened through livox_viewer, you can play them like a video, and if you want you can export **just a frame** in .las or in .csv format.
+
+
+## 4) Install Livox ROS Driver
+You can get the instruction from here: https://github.com/Livox-SDK/livox_ros_driver
+
+**or you can copy from here and paste in your terminal:**
+
+1) ***git clone https://github.com/Livox-SDK/livox_ros_driver.git ws_livox/src***
+
+2) ***cd ws_livox***
+ 
+3) ***catkin_make***
+
+4) ***source ./devel/setup.sh***
+
+You are ready. 
+If you want you can run it, for example with the command: ***roslaunch livox_ros_driver livox_lidar_rviz.launch***
+It is important to read the instructions and the info of the livox_ros_driver command options from here: https://github.com/Livox-SDK/livox_ros_driver
+
+Also, extremelly important is the **json** file from where you can pre-set some important parameters.
+The json configuration file is in the ***ws_livox/src/livox_ros_driver/config*** directory.
+
+## 5) Install the livox_mapping package
+Livox_mapping is a mapping package for Livox LiDARs. The package currently contains the basic functions of low-speed mapping.
+
+You can follow the instructions from here: https://github.com/Livox-SDK/livox_mapping
+**or copy from here and paste in your terminal:**
+
+1) ***sudo apt install libpcl-dev***
+
+2) ***sudo apt-get update***
+
+3) ***sudo apt-get install libeigen3-dev***
+
+4) ***sudo apt update***
+
+5) ***sudo apt install python3-opencv***
+
+6) ***cd ~/catkin_ws/src***
+
+7) ***git clone https://github.com/Livox-SDK/livox_mapping.git***
+
+8) ***cd ..***
+
+9) ***catkin_make***
+
+10) ***source ~/catkin_ws/devel/setup.bash***
+
+Installation complete.
+For Livox Horizon, run the next two commands in **defferent terminals**:
+
+terminal_1) ***roslaunch livox_mapping mapping_horizon.launch***
+terminal_2) ***roslaunch livox_ros_driver livox_lidar_msg.launch***
+
+If you want to **save the pcd** file please add map_file_path in launch file of the *mapping_horizon.launch*
+
