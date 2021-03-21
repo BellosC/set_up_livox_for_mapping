@@ -65,6 +65,6 @@ Save it. Type in the terminal, just to be sure, the command:
 
 Now, in order to make sure that *~/catkin_ws/devel* is the default workspace, you can type 
 
-17) ***ros cd***
+16) ***ros cd***
 
 **Congratulations, now you have ROS melodic in your computer.**
