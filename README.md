@@ -4,6 +4,8 @@
 ## 1) Download and install **Ubuntu 18.04 LTS** operating system. You can get it from here: https://ubuntu.com
 Be carefull if you are using a computer (x86 version) or a raspberry pi (arm64).
 
+---
+
 ## 2) Install **ROS Melodic** (Robot Operating System)
 *(Careful, it is compatible only with Ubuntu 18.04 or else "Bionic")*
 
@@ -69,6 +71,8 @@ Now, in order to make sure that *~/catkin_ws/devel* is the default workspace, yo
 
 **Congratulations, now you have ROS melodic in your computer.**
 
+---
+
 ## 3) Install Livox-SDK
 You can get the instructions from here: https://github.com/Livox-SDK/Livox-SDK
 
@@ -104,6 +108,7 @@ Here is the example:
 
 Note: .lvx files can be opened through livox_viewer, you can play them like a video, and if you want you can export **just a frame** in .las or in .csv format.
 
+---
 
 ## 4) Install Livox ROS Driver
 You can get the instruction from here: https://github.com/Livox-SDK/livox_ros_driver
@@ -128,6 +133,8 @@ It is important to read the instructions and the info of the livox_ros_driver co
 Also, extremelly important is the **json** file from where you can pre-set some important parameters.
 
 The json configuration file is in the ***ws_livox/src/livox_ros_driver/config*** directory.
+
+---
 
 ## 5) Install the livox_mapping package
 Livox_mapping is a mapping package for Livox LiDARs. The package currently contains the basic functions of low-speed mapping.
@@ -158,7 +165,9 @@ You can follow the instructions from here: https://github.com/Livox-SDK/livox_ma
 Installation complete.
 
 
+
 For Livox Horizon, run the next two commands in **defferent terminals**:
+
 
 terminal_1) ***roslaunch livox_mapping mapping_horizon.launch***
 
@@ -167,12 +176,12 @@ terminal_2) ***roslaunch livox_ros_driver livox_lidar_msg.launch***
 
 If you want to **save the pcd** file please add map_file_path in launch file of the *mapping_horizon.launch*
 
-When you stop those 2 commands, you will find a .pcd file in the path that you hwve typed in the *map_file_path*.
+When you stop those 2 commands, you will find a .pcd file in the path that you hαve typed in the *map_file_path*.
 
-You can open this .pcd file in **Cloud Compare** or any other similar point-cloud software that supports .pcd file format.
+You can open this .pcd file with **Cloud Compare** or with any other similar point-cloud software that supports .pcd file format.
 
 
-
+---
 
 I will try to impove more this guide in the near future.
 
