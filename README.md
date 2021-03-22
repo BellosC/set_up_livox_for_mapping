@@ -200,8 +200,12 @@ Some notes that came through many hours of struggling:
    - scenario-B) You can use livox_mapping package. With 2 commands in 2 different terminals, you can start the lidar and with ctrl-c in each terminal you can stop the procedure. When you stop it, you will find a .pcd file in the path that you chosed. Next you can open the .pcd file at **Cloud Compare** to examine the mapping results. I HAVE tested this scenario with great success.
 ---
 Remember, everything written here is just my opinion and my personal experience.
-Always double check everything from the official instrutions of each package.
+
+Always double check everything from the official instructions of each package.
+
 All i wanted to do was to write down my experience in order to remember the procedure in the future, and help the lidar community.
+
 In the near future, i will try to improve more this guide.
+
 
 Keep walking fellows.
