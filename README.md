@@ -1,6 +1,6 @@
 # set_up_livox_for_mapping
 
-### This is a non-professional guide to help you set up a *computer* or a *raspberry pi 4 model B* from zero, in order to be able to achieve mapping results with livox horizon lidar. 
+### This is an unofficial guide to help you set up a *computer* or a *raspberry pi 4 model B* from zero, in order to be able to achieve mapping results with livox horizon lidar. 
 ## 1) Download and install **Ubuntu 18.04 LTS** operating system. You can get it from here: https://ubuntu.com
 I advise you to keep a back up of your important files before installing a new operating system.
 Be carefull of the compatibilities of ubuntu images --> computer (x86 version), ---> raspberry pi (arm64).
