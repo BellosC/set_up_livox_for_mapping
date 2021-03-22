@@ -272,12 +272,12 @@ Installation complete.
 
    > Type :
 ```sh
-   sudo apt install pcl-tools
+sudo apt install pcl-tools
    ```
    > to install pcl tools to your system, and then navigate to the folder that contains your .pcd file, open a terminal and run:
 
 ```sh
-   pcl_viewer my_name_of_pcd_file.pcd
+pcl_viewer my_name_of_pcd_file.pcd
    ```
 
    > It will open a window like this:
