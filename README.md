@@ -15,7 +15,9 @@ Perhaps the full-desktop version of Ubuntu 18.04 LTS is not an option of the Ras
 Get the instractions from here http://wiki.ros.org/melodic/Installation/Ubuntu
 
 **Or copy from here and paste in your terminal:**
-1) ***sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'***
+1) ```sh
+   sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+   ```
 
 2) ***sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654***
 
