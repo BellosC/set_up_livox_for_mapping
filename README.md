@@ -270,7 +270,11 @@ Installation complete.
 
    > If you don't wan't to install it, you can use **pcl** to examine your pointcloud.
 
-   > Type ***sudo apt install pcl-tools*** to install pcl tools to your system, and then navigate to the folder that contains your .pcd file, open a terminal and run:
+   > Type :
+```sh
+   sudo apt install pcl-tools
+   ```
+   > to install pcl tools to your system, and then navigate to the folder that contains your .pcd file, open a terminal and run:
 
 ```sh
    pcl_viewer my_name_of_pcd_file.pcd
@@ -299,7 +303,8 @@ Installation complete.
    - scenario-A) You can use it as a static Scanner. Put livox in a tripod, and through the Livox-SDK get an .lvx file without moving the lidar. Next you move the tripod in a different location, with good overlapping of points and repeat the procedure. when you have covered your area of interest, you can put the .lvx files in the livox viewer and extract them as .las files. Then through **Cloud Compare** software you can try to force them in one registered pointcloud. I HAVE NOT tested his senario yet.
    - scenario-B) You can use livox_mapping package. With 2 commands in 2 different terminals, you can start the lidar and with ctrl-c in each terminal you can stop the procedure. When you stop it, you will find a .pcd file in the path that you chosed. Next you can open the .pcd file at **Cloud Compare** to examine the mapping results. I HAVE tested this scenario with great success.
 ---
-   > **Remember**, everything written here is just my opinion and my personal experience.
+**Remember:**
+   > Everything written here is just my opinion and my personal experience.
 
    > Always double-check everything from the official instructions of each package.
 
