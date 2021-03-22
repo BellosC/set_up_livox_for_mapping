@@ -15,34 +15,51 @@ Perhaps the full-desktop version of Ubuntu 18.04 LTS is not an option of the Ras
 Get the instractions from here http://wiki.ros.org/melodic/Installation/Ubuntu
 
 **Or copy from here and paste in your terminal:**
-1) ```sh
+1. ```sh
    sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
    ```
 
-2) ***sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654***
+1. ```sh
+   sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+   ```
 
-3) ***sudo apt update***
+1. ```sh
+   sudo apt update
+   ```
 
-4) ***sudo apt install ros-melodic-desktop-full***
+1. ```sh
+   sudo apt install ros-melodic-desktop-full
+   ```
 
-Before you can use **ROS** you need to initialize *rosdep* (allows you to easily install system dependencies for sources you want to compile and it is required to run some components of **ROS**). So type in your terminal:
+   > Before you can use **ROS** you need to initialize *rosdep* (allows you to easily install system dependencies for sources you want to compile and it is required to run some components of **ROS**). So type in your terminal:
 
-5) ***sudo rosdep init***
+1. ```sh
+   sudo rosdep init
+   ```
 
-6) ***rosdep update***
+1. ```sh
+   rosdep update
+   ```
 
-Congratulations, you now have **ROS** up and running.
-To enable **ROS** in your system you need to **source the setup.bash of the OS workspace**, so type in your terminal:
+   > Congratulations, you now have **ROS** up and running.
+   To enable **ROS** in your system you need to **source the setup.bash of the OS workspace**, so type in your terminal:
 
-7) ***gedit .bashrc***
+1. ```sh
+   gedit .bashrc
+   ```
 
-Now in the .bashrc file that opened, in the end,  you need to add the command: **source /opt/ros/melodic/setup.bash** so you do not have to manually type it every time. Please save the .bashrc file and then type in your terminal:
 
-8) ***source .bashrc***
+   > Now in the .bashrc file that opened, in the end,  you need to add the command: **source /opt/ros/melodic/setup.bash** so you do not have to manually type it every time. Please save the .bashrc file and then type in your terminal:
 
-The last step is to install tools and other dependencies to build ROS packages. Type in your terminal:
+1. ```sh
+   source .bashrc
+   ```
 
-9) ***sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential***
+   > The last step is to install tools and other dependencies to build ROS packages. Type in your terminal:
+
+1. ```sh
+   sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
+   ```
 
 After finishing the installation, you should create a workspace, where to put your projects and ros packages.
 For this you need to create a new workspace in the home directory, and this workspace will be used later to put all your ROS projects and packages.
@@ -83,9 +100,9 @@ You can get the instructions from here: https://github.com/Livox-SDK/Livox-SDK
 
 **Or you can copy from here and paste to your terminal:**
 
-1) ***sudo apt install cmake***
+1. ***sudo apt install cmake***
 
-2) ***git clone https://github.com/Livox-SDK/Livox-SDK.git***
+1. ***git clone https://github.com/Livox-SDK/Livox-SDK.git***
    ***cd Livox-SDK***
    ***cd build && cmake ..***
    ***make***
@@ -94,7 +111,7 @@ You can get the instructions from here: https://github.com/Livox-SDK/Livox-SDK
 Installation complete.
 
 If you want to capture and save a file in .lvx format type:
-1) cd build
+1. cd build
 2) cd Livox-SDK
 3) cd build
 4) cd sample
