@@ -1,8 +1,11 @@
 # set_up_livox_for_mapping
 
-### This is a guide to help you set up a *computer* or a *raspberry pi 4 model B* from zero, in order to be able to achieve mapping with livox horizon lidar.
+### This is a non-professional guide to help you set up a *computer* or a *raspberry pi 4 model B* from zero, in order to be able to achieve mapping results with livox horizon lidar. 
 ## 1) Download and install **Ubuntu 18.04 LTS** operating system. You can get it from here: https://ubuntu.com
-Be carefull if you are using a computer (x86 version) or a raspberry pi (arm64).
+I advise you to keep a back up of your important files before installing a new operating system.
+Be carefull of the compatibilities of ubuntu images computer (x86 version) or a raspberry pi (arm64).
+If you are using a raspberry pi, you can use Raspberry Pi Imager software https://www.raspberrypi.org/software/.
+Perhaps the full-desktop version of Ubuntu 18.04 LTS is not an option of the Raspberry Pi Imager, but you can add it like an image very easily.
 
 ---
 
@@ -100,7 +103,7 @@ Program Options:
 
 [-t] Time to save point cloud to the lvx file.(unit: s)
 
-[-p] Get the extrinsic parameter from standard extrinsic.xml file(The same as viewer) in the executable file's directory.
+[-p] Get the extrinsic parameter from standard extrinsic.xml file (The same as viewer) in the executable file's directory.
 
 Here is the example:
 
@@ -174,15 +177,26 @@ terminal_1) ***roslaunch livox_mapping mapping_horizon.launch***
 terminal_2) ***roslaunch livox_ros_driver livox_lidar_msg.launch***
 
 
-If you want to **save the pcd** file please add map_file_path in launch file of the *mapping_horizon.launch*
+If you want to **save the pcd** file, before you run those two commands above, please add a path at map_file_path parameter in launch file of the *mapping_horizon.launch*.
+
+
+Try to keep livox horizon steady, perhaps in a tripod, and move it slowly to cover all your region of interest.
 
 When you stop those 2 commands, you will find a .pcd file in the path that you hαve typed in the *map_file_path*.
 
 You can open this .pcd file with **Cloud Compare** or with any other similar point-cloud software that supports .pcd file format.
 
+Some notes:
 
+1) Time sync with livox horizon, from my personal exprerience, is not an easy thing to achive. Until this day i am not able to achive PPS & GPRMC synchronization.
+2) Livox Viewer, is a nice way to open .lvx files and have access to the internal information of the points and sensors in a .csv format. Unfortunatelly this works for only one frame at a time. Actually .lvx file recording is more like a video capturing. You can see the info of all recorded points separetely, but you cannot get a complete .csv file with every single point that you recorded.
+3) Even if you achieve time sync with Livox_ros_driver, when you use the livox_mapping i believe that it is useless, because the package can only give you a well-registered point cloud in a .pcd format. This means that through the **Cloud Compare** the info that you can actually have access to, is the x,y,z info of all the points in a reference system with 0,0,0 at the beginning of the lidar. Nothing else.
+4) When you record data with livox_mapping, you have about 2-3 minutes of capturing because in my case if you keep recording for more time, it will crash and the system will not be able to save a .pcd file. This happens more often when i try to use livox_mapping from my raspberry pi 4.
+5) Livox Horizon lidar with livox_mapping package CANNOT BE USED in in-door situations, it is impossible to give you back accurate results. It must be used only outside, because the out-door environment enabels the program to get many different and clear points in order to achieve good mapping results.
+6) In my humble and non-professional opinion you can use livox horizon in two different ways.
+   - schenario-A) You can use it as a static Scanner. Put livox in a tripod, and through the Livox-SDK get an .lvx file without moving the lidar. Next you move the tripod in a different location, with good overlapping of points and repeat the procedure. when you have covered your area of interest, you can put the .lvx files in the livox viewer and extract them as .las files. Then through **Cloud Compare** software you can try to force them in one registered pointcloud. I HAVE NOT tested his senario yet.
+   - scenario-B) You can use livox_mapping package. With 2 commands in 2 different terminals, you can start the lidar and with ctrl-c in each terminal you can stop the procedure. When you stop it, you will find a .pcd file in the path that you chosed. Next you can open the .pcd file at **Cloud Compare** to examine the mapping results. I HAVE tested this scenario with great success.
 ---
-
-I will try to impove more this guide in the near future.
+In the near future, i will try to improve more this guide.
 
 Keep walking fellows.
