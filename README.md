@@ -151,17 +151,17 @@ If you want to capture and save a file in .lvx format type:
    ```
       > (read the Program Options for more info)
 
-> Program Options:
+Program Options:
 
-> [-t] Time to save point cloud to the lvx file.(unit: s)
+   > [-t] Time to save point cloud to the lvx file.(unit: s)
 
-> [-p] Get the extrinsic parameter from standard extrinsic.xml file (The same as viewer) in the executable file's directory.
+   > [-p] Get the extrinsic parameter from standard extrinsic.xml file (The same as viewer) in the executable file's directory.
 
-> Here is the example:
+   > Here is the example:
 
-> ./lidar_lvx_sample -c "00000000000002&00000000000003&00000000000004" -l -t 10 -p
+   > ./lidar_lvx_sample -c "00000000000002&00000000000003&00000000000004" -l -t 10 -p
 
-> Note: .lvx files can be opened through livox_viewer, you can play them like a video, and if you want you can export **just a frame** in .las or in .csv format.
+   > Note: .lvx files can be opened through livox_viewer, you can play them like a video, and if you want you can export **just a frame** in .las or in .csv format.
 
 ---
 
