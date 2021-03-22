@@ -186,9 +186,9 @@ When you stop those 2 commands, you will find a .pcd file in the path that you h
 
 You can open this .pcd file with **Cloud Compare** or with any other similar point-cloud software that supports .pcd file format.
 
---
+---
 
-Some notes that came through many hours of struggling:
+Some notes that came through many hours of struggle:
 
 1) Time sync with livox horizon, from my personal exprerience, is not an easy thing to achive. Until this day i am not able to achive PPS & GPRMC synchronization.
 2) Livox Viewer, is a nice way to open .lvx files and have access to the internal information of the points and sensors in a .csv format. Unfortunatelly this works for only one frame at a time. Actually .lvx file recording is more like a video capturing. You can see the info of all recorded points separetely, but you cannot get a complete .csv file with every single point that you recorded.
@@ -201,9 +201,9 @@ Some notes that came through many hours of struggling:
 ---
 Remember, everything written here is just my opinion and my personal experience.
 
-Always double check everything from the official instructions of each package.
+Always double-check everything from the official instructions of each package.
 
-All i wanted to do was to write down my experience in order to remember the procedure in the future, and help the lidar community.
+All i wanted to do, was to write down my experience in order to remember the procedure in the future, and help the lidar community.
 
 In the near future, i will try to improve more this guide.
 
