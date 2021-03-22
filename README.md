@@ -301,7 +301,7 @@ pcl_viewer my_name_of_pcd_file.pcd
 
 6) In my humble opinion you can use livox horizon in two different ways.
    - scenario-A) You can use it as a static Scanner. Put livox in a tripod, and through the Livox-SDK get an .lvx file without moving the lidar. Next you move the tripod in a different location, with good overlapping of points and repeat the procedure. when you have covered your area of interest, you can put the .lvx files in the livox viewer and extract them as .las files. Then through **Cloud Compare** software you can try to force them in one registered pointcloud. I HAVE NOT tested this senario yet.
-   - scenario-B) You can use livox_mapping package. With 2 commands in 2 different terminals, you can start the lidar and with ctrl-c in each terminal you can stop the procedure. When you stop it, you will find a .pcd file in the path that you chosed. Next you can open the .pcd file at **Cloud Compare** to examine the mapping results. I HAVE tested this scenario with great success.
+   - scenario-B) You can use livox_mapping package. With 2 commands in 2 different terminals, you can start the lidar and with ctrl-c in each terminal you can stop the procedure. When you stop it, you will find a .pcd file in the path that you typed in the *mapping_horizon.launch* file. Next you can open the .pcd file at **Cloud Compare** to examine the mapping results. I HAVE tested this scenario with great success.
 ---
 **Remember:**
    > Everything written here is just my opinion and my personal experience.
