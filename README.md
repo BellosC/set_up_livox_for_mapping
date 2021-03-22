@@ -186,6 +186,19 @@ When you stop those 2 commands, you will find a .pcd file in the path that you h
 
 You can open this .pcd file with **Cloud Compare** or with any other similar point-cloud software that supports .pcd file format.
 
+In case that you don't have **Cloud Compare** you can install it from here: https://snapcraft.io/install/cloudcompare/ubuntu
+
+If you don't wan't to install it, you can use **pcl** to examine your pointcloud.
+
+Type ***sudo apt install pcl-tools*** to install pcl tools to your system, and then navigate to the folder that contains your .pcd file, open a terminal and run:
+
+***pcl_viewer my_name_of_pcd_file.pcd***.
+
+It will open a window like this:
+
+![Screenshot from 2021-03-22 15-04-28](https://user-images.githubusercontent.com/70270581/112011278-05f3a500-8b20-11eb-8eaf-9a65ea9fe17e.png)
+
+
 ---
 
 Some notes that came through many hours of struggle:
