@@ -247,9 +247,9 @@ You can follow the instructions from here: https://github.com/Livox-SDK/livox_ma
 
 Installation complete.
 
+   > Connect your lidar to you pc (ethernet cable) and turn the lidar on. Wait until you hear the motors moving. For issues abouth the connection please read carefully the *Horizon User Manual*, you can download it from here: https://www.livoxtech.com/horizon/downloads
 
-
-   > For Livox Horizon, run the next two commands in **defferent terminals**:
+   > For Livox Horizon, when everything is up and running, run the next two commands in **defferent terminals**:
 
 
    > terminal_1) ***roslaunch livox_mapping mapping_horizon.launch***
@@ -257,7 +257,7 @@ Installation complete.
    > terminal_2) ***roslaunch livox_ros_driver livox_lidar_msg.launch***
 
 
-   > If you want to **save the pcd** file, before you run those two commands above, please add a path at map_file_path parameter in launch file of the *mapping_horizon.launch*.
+   > If you want to **save the pcd** file, *before* you run those two commands above, please add a path at map_file_path parameter in launch file of the *mapping_horizon.launch*.
 
 
    > Try to keep livox horizon steady, perhaps in a tripod, and move it slowly to cover all your region of interest.
