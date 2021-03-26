@@ -247,7 +247,9 @@ You can follow the instructions from here: https://github.com/Livox-SDK/livox_ma
 
 Installation complete.
 
-   > Connect your lidar to you pc (ethernet cable) and turn the lidar on. Wait until you hear the motors moving. For issues abouth the connection please read carefully the *Horizon User Manual*, you can download it from here: https://www.livoxtech.com/horizon/downloads
+   > Connect your lidar to your pc or your raspberry pi (using the ethernet port) and turn the lidar on. Wait until you hear the motors moving. 
+   
+   > For issues about the connection please read carefully the *Horizon User Manual*, you can download it from here: https://www.livoxtech.com/horizon/downloads
 
    > For Livox Horizon, when everything is up and running, run the next two commands in **defferent terminals**:
 
